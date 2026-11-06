@@ -1,0 +1,19 @@
+{
+  "name": "居酒屋開拓マップ - 赤提灯",
+  "short_name": "居酒屋開拓",
+  "description": "訪れた・気になる酒場をジャンルごとに即座に呼び出す自分専用のデジタル赤ちょうちんマップ",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#121316",
+  "theme_color": "#121316",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+

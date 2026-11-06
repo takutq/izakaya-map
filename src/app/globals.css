@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================================
+   テーマ変数定義（RGBスペース区切り）
+   - デフォルト（.dark）: 墨色ダークモード（道や地図が見やすいスレートダーク）
+   - ライト（html:not(.dark)）: 生成り・暖簾ホワイトモード
+   ============================================================================ */
+:root {
+  color-scheme: light;
+  --c-sumi-950: 244 241 234; /* 全体背景: 落ち着いた生成り和紙色 */
+  --c-sumi-900: 236 232 223; /* ヘッダー・サブ背景 */
+  --c-sumi-800: 250 248 243; /* 入力欄・インセット背景 */
+  --c-sumi-700: 255 255 255; /* カード・ドロワーサーフェス */
+  --c-sumi-600: 229 224 213; /* ホバーサーフェス */
+  --c-sumi-500: 206 199 186; /* ソリッド境界線 */
+
+  --c-kinari-100: 26 28 32;  /* メイン文字: 濃い墨色 */
+  --c-kinari-200: 55 60 68;  /* サブ文字 */
+  --c-kinari-400: 104 110 120; /* 補助文字 */
+  --c-kinari-500: 148 154 164; /* プレースホルダー */
+}
+
+html.dark {
+  color-scheme: dark;
+  --c-sumi-950: 22 25 30;    /* 全体背景: 真っ黒すぎない落ち着いた墨色 */
+  --c-sumi-900: 28 32 38;    /* ヘッダー・サブ背景 */
+  --c-sumi-800: 35 40 48;    /* 入力欄・インセット背景 */
+  --c-sumi-700: 42 47 56;    /* カード・ドロワーサーフェス */
+  --c-sumi-600: 52 58 69;    /* ホバーサーフェス */
+  --c-sumi-500: 64 72 84;    /* ソリッド境界線 */
+
+  --c-kinari-100: 243 241 236; /* メイン文字: 生成りオフホワイト */
+  --c-kinari-200: 222 218 210; /* サブ文字 */
+  --c-kinari-400: 156 163 175; /* 補助文字 */
+  --c-kinari-500: 107 114 128; /* プレースホルダー */
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(var(--c-sumi-950));
+  color: rgb(var(--c-kinari-100));
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 横スクロールチップのスクロールバー非表示 */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* iOS ノッチ・ホームバーのセーフエリア余白補助 */
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* MapLibre ポップアップ・コントロールのテーマ連動調整 */
+.maplibregl-ctrl-group {
+  background-color: rgb(var(--c-sumi-700)) !important;
+  border: 1px solid rgb(var(--c-sumi-500)) !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+.maplibregl-ctrl-group button {
+  border-bottom: 1px solid rgb(var(--c-sumi-500)) !important;
+}
+html.dark .maplibregl-ctrl-icon {
+  filter: invert(92%) sepia(6%) saturate(180%) hue-rotate(10deg);
+}

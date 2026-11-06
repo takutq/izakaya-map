@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="96" fill="#121316"/>
+  <rect x="24" y="24" width="464" height="464" rx="76" stroke="#32363E" stroke-width="6"/>
+  <!-- 提灯上部・下部金具 -->
+  <rect x="196" y="76" width="120" height="24" rx="4" fill="#23262B" stroke="#F3F1EC" stroke-width="6"/>
+  <rect x="206" y="404" width="100" height="24" rx="4" fill="#23262B" stroke="#F3F1EC" stroke-width="6"/>
+  <line x1="256" y1="48" x2="256" y2="76" stroke="#D99B26" stroke-width="10" stroke-linecap="square"/>
+  <line x1="256" y1="428" x2="256" y2="464" stroke="#D99B26" stroke-width="10" stroke-linecap="square"/>
+  <!-- 提灯本体 -->
+  <rect x="136" y="100" width="240" height="304" rx="88" fill="#D94E34" stroke="#F3F1EC" stroke-width="8"/>
+  <!-- 提灯の竹ひご横線 -->
+  <line x1="142" y1="176" x2="370" y2="176" stroke="#121316" stroke-width="6" stroke-opacity="0.45"/>
+  <line x1="136" y1="252" x2="376" y2="252" stroke="#121316" stroke-width="6" stroke-opacity="0.45"/>
+  <line x1="142" y1="328" x2="370" y2="328" stroke="#121316" stroke-width="6" stroke-opacity="0.45"/>
+  <!-- 中央の白抜き枠と「酒」モチーフ -->
+  <rect x="212" y="148" width="88" height="208" rx="6" fill="#F3F1EC"/>
+  <text x="256" y="280" text-anchor="middle" fill="#121316" font-family="serif" font-weight="900" font-size="76">酒</text>
+</svg>
+
